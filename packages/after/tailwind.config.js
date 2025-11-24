@@ -112,11 +112,7 @@ export default {
           },
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+      // borderRadius는 아래에서 확장 정의
       // 간격 토큰
       spacing: {
         xs: "4px",
@@ -184,31 +180,27 @@ export default {
         "table-header": ["0.75rem", { lineHeight: "1", fontWeight: "500" }],
         "table-cell": ["0.875rem", { lineHeight: "1" }],
       },
-      fontWeight: {
-        normal: "400",
-        medium: "500",
-        bold: "700",
-      },
+      // fontWeight는 Tailwind 기본값과 동일하므로 제거 (normal: 400, medium: 500, bold: 700)
       lineHeight: {
-        none: "1",
-        tight: "1.4",
-        normal: "1.5",
-        relaxed: "1.43",
-        loose: "1.6",
-        textarea: "1.1876em",
+        // none, normal은 Tailwind 기본값과 동일하므로 제거
+        tight: "1.4", // Tailwind 기본: 1.25 (커스텀 값 유지)
+        relaxed: "1.43", // Tailwind 기본: 1.625 (커스텀 값 유지)
+        loose: "1.6", // Tailwind 기본: 2 (커스텀 값 유지)
+        textarea: "1.1876em", // 커스텀 값
       },
       // Border Radius 토큰 (기존 커스텀)
       borderRadius: {
-        ...{
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
-        },
+        // shadcn/ui 기본값 (위에 이미 정의됨)
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        // 커스텀 값
         xs: "2px",
         "custom-sm": "3px",
         "custom-md": "4px",
         "custom-lg": "10px",
-        full: "50%",
+        // full은 Tailwind 기본값(9999px)과 다르지만 50%는 일반적으로 사용되므로 유지
+        "full-circle": "50%", // full과 구분하기 위해 이름 변경
       },
       // 그림자 토큰
       boxShadow: {
@@ -221,20 +213,18 @@ export default {
       },
       // Opacity 토큰
       opacity: {
-        disabled: "0.6",
-        border: "0.12",
-        "border-light": "0.08",
-        hover: "0.04",
-        icon: "0.54",
-        text: "0.87",
-        "text-secondary": "0.6",
-        "input-border": "0.23",
-        overlay: "0.5",
+        // disabled, text-secondary는 Tailwind 기본값 60(0.6)과 동일하지만 의미적으로 구분하기 위해 유지
+        disabled: "0.6", // Tailwind 기본: opacity-60과 동일
+        border: "0.12", // 커스텀 값
+        "border-light": "0.08", // 커스텀 값
+        hover: "0.04", // 커스텀 값
+        icon: "0.54", // 커스텀 값
+        text: "0.87", // 커스텀 값
+        "text-secondary": "0.6", // Tailwind 기본: opacity-60과 동일
+        "input-border": "0.23", // 커스텀 값
+        overlay: "0.5", // Tailwind 기본: opacity-50과 동일
       },
-      // Border Width 토큰
-      borderWidth: {
-        focus: "2px",
-      },
+      // Border Width는 Tailwind 기본값 사용 (border-2 = 2px)
       // Width 토큰
       width: {
         "input-small": "200px",
@@ -269,9 +259,8 @@ export default {
       },
       // Transition 토큰
       transitionDuration: {
-        fast: "150ms",
-        normal: "200ms",
-        slow: "1.4s",
+        // fast, normal은 Tailwind 기본값과 동일하므로 제거 (duration-150, duration-200)
+        slow: "1.4s", // 커스텀 값
       },
       transitionTimingFunction: {
         "ease-in-out": "cubic-bezier(0.0, 0, 0.2, 1)",
