@@ -1,14 +1,10 @@
 import React from 'react'
-import { Header } from './components/organisms'
-import { ManagementPage } from './pages/ManagementPage'
-import './styles/components.css'
 
 export const App: React.FC = () => {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f7fafc' }}>
-      <Header />
+    <div className="min-h-screen bg-background">
       <main>
-        <ManagementPage />
+        {/* TODO: ManagementPage 마이그레이션 후 추가 */}
       </main>
     </div>
   );

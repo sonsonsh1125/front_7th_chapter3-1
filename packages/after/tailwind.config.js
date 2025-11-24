@@ -3,88 +3,119 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // 색상 토큰
+      // shadcn/ui CSS 변수
       colors: {
-        // Primary
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1976d2",
-          dark: "#1565c0",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        // Secondary
         secondary: {
-          DEFAULT: "#f5f5f5",
-          dark: "#e0e0e0",
-          gray: "#757575",
-          border: "#ddd",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
-        // Danger
-        danger: {
-          DEFAULT: "#d32f2f",
-          dark: "#c62828",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-        // Success
-        success: {
-          DEFAULT: "#388e3c",
-          dark: "#2e7d32",
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
-        // Warning
-        warning: {
-          DEFAULT: "#f57c00",
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
-        // Info
-        info: {
-          DEFAULT: "#0288d1",
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
-        // Neutral
-        neutral: {
-          DEFAULT: "#333",
-          light: "#666",
-          dark: "#000",
-          white: "#fff",
-          gray: "#fafafa",
-          border: "#ccc",
-          "border-dark": "#bdbdbd",
-          text: "#424242",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
-        // Gray scale
-        gray: {
-          DEFAULT: "#374151",
-          light: "#6b7280",
-          border: "#d1d5db",
-        },
-        // Error
-        error: {
-          DEFAULT: "#d32f2f",
-          light: "#ef4444",
-        },
-        // Alert colors
-        alert: {
-          info: {
-            bg: "#e3f2fd",
-            border: "#90caf9",
-            text: "#0d47a1",
+        // 기존 색상 토큰 (shadcn과 충돌 방지를 위해 brand 네임스페이스 사용)
+        brand: {
+          primary: {
+            DEFAULT: "#1976d2",
+            dark: "#1565c0",
+          },
+          secondary: {
+            DEFAULT: "#f5f5f5",
+            dark: "#e0e0e0",
+            gray: "#757575",
+            border: "#ddd",
+          },
+          danger: {
+            DEFAULT: "#d32f2f",
+            dark: "#c62828",
           },
           success: {
-            bg: "#e8f5e9",
-            border: "#81c784",
-            text: "#1b5e20",
+            DEFAULT: "#388e3c",
+            dark: "#2e7d32",
           },
           warning: {
-            bg: "#fff3e0",
-            border: "#ffb74d",
-            text: "#e65100",
+            DEFAULT: "#f57c00",
           },
-          error: {
-            bg: "#ffebee",
-            border: "#e57373",
-            text: "#b71c1c",
+          info: {
+            DEFAULT: "#0288d1",
           },
-          default: {
-            bg: "#f5f5f5",
-            border: "#bdbdbd",
+          neutral: {
+            DEFAULT: "#333",
+            light: "#666",
+            dark: "#000",
+            white: "#fff",
+            gray: "#fafafa",
+            border: "#ccc",
+            "border-dark": "#bdbdbd",
             text: "#424242",
           },
+          gray: {
+            DEFAULT: "#374151",
+            light: "#6b7280",
+            border: "#d1d5db",
+          },
+          error: {
+            DEFAULT: "#d32f2f",
+            light: "#ef4444",
+          },
+          alert: {
+            info: {
+              bg: "#e3f2fd",
+              border: "#90caf9",
+              text: "#0d47a1",
+            },
+            success: {
+              bg: "#e8f5e9",
+              border: "#81c784",
+              text: "#1b5e20",
+            },
+            warning: {
+              bg: "#fff3e0",
+              border: "#ffb74d",
+              text: "#e65100",
+            },
+            error: {
+              bg: "#ffebee",
+              border: "#e57373",
+              text: "#b71c1c",
+            },
+            default: {
+              bg: "#f5f5f5",
+              border: "#bdbdbd",
+              text: "#424242",
+            },
+          },
         },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       // 간격 토큰
       spacing: {
@@ -166,12 +197,17 @@ export default {
         loose: "1.6",
         textarea: "1.1876em",
       },
-      // Border Radius 토큰
+      // Border Radius 토큰 (기존 커스텀)
       borderRadius: {
+        ...{
+          lg: "var(--radius)",
+          md: "calc(var(--radius) - 2px)",
+          sm: "calc(var(--radius) - 4px)",
+        },
         xs: "2px",
-        sm: "3px",
-        md: "4px",
-        lg: "10px",
+        "custom-sm": "3px",
+        "custom-md": "4px",
+        "custom-lg": "10px",
         full: "50%",
       },
       // 그림자 토큰
