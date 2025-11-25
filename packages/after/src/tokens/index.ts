@@ -3,6 +3,15 @@
  *
  * Tailwind config에 정의된 디자인 토큰을 TypeScript에서도 사용할 수 있도록
  * 타입과 상수로 export합니다.
+ *
+ * 이 토큰들은 input.css의 @theme 블록과 :root CSS 변수에 연결되어 있습니다.
+ * CVA 컴포넌트들은 Tailwind 유틸리티 클래스(bg-primary, text-primary 등)를 통해
+ * 이 토큰 값들을 사용합니다.
+ *
+ * 연결 관계:
+ * - colors.primary.DEFAULT (#1976d2) -> --primary: 217.2 91.2% 59.8% -> bg-primary
+ * - colors.danger.DEFAULT (#d32f2f) -> --destructive: 0 84.2% 60.2% -> bg-destructive
+ * - colors.secondary.DEFAULT (#f5f5f5) -> --secondary: 210 40% 96.1% -> bg-secondary
  */
 
 // 색상 토큰
@@ -72,3 +81,4 @@ export const borderRadius = {
   lg: "10px",
   full: "50%",
 } as const;
+
