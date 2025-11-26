@@ -577,6 +577,7 @@ export const ManagementPage: React.FC = () => {
                   <Label htmlFor="username">사용자명</Label>
                   <Input
                     id="username"
+                    name="username"
                     value={formData.username || ""}
                     onChange={(e) =>
                       setFormData({ ...formData, username: e.target.value })
@@ -589,6 +590,7 @@ export const ManagementPage: React.FC = () => {
                   <Label htmlFor="email">이메일</Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     value={formData.email || ""}
                     onChange={(e) =>
@@ -616,6 +618,19 @@ export const ManagementPage: React.FC = () => {
                         <SelectItem value="admin">관리자</SelectItem>
                       </SelectContent>
                     </Select>
+                    <select
+                      name="role"
+                      value={formData.role || "user"}
+                      onChange={(e) =>
+                        setFormData({ ...formData, role: e.target.value })
+                      }
+                      style={{ display: "none" }}
+                      aria-hidden="true"
+                    >
+                      <option value="user">사용자</option>
+                      <option value="moderator">운영자</option>
+                      <option value="admin">관리자</option>
+                    </select>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="status">상태</Label>
@@ -742,6 +757,7 @@ export const ManagementPage: React.FC = () => {
                   <Label htmlFor="edit-username">사용자명</Label>
                   <Input
                     id="edit-username"
+                    name="username"
                     value={formData.username || ""}
                     onChange={(e) =>
                       setFormData({ ...formData, username: e.target.value })
@@ -754,6 +770,7 @@ export const ManagementPage: React.FC = () => {
                   <Label htmlFor="edit-email">이메일</Label>
                   <Input
                     id="edit-email"
+                    name="email"
                     type="email"
                     value={formData.email || ""}
                     onChange={(e) =>
@@ -781,6 +798,19 @@ export const ManagementPage: React.FC = () => {
                         <SelectItem value="admin">관리자</SelectItem>
                       </SelectContent>
                     </Select>
+                    <select
+                      name="role"
+                      value={formData.role || "user"}
+                      onChange={(e) =>
+                        setFormData({ ...formData, role: e.target.value })
+                      }
+                      style={{ display: "none" }}
+                      aria-hidden="true"
+                    >
+                      <option value="user">사용자</option>
+                      <option value="moderator">운영자</option>
+                      <option value="admin">관리자</option>
+                    </select>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="edit-status">상태</Label>

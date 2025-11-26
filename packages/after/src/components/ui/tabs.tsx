@@ -64,6 +64,7 @@ const TabsTrigger = React.forwardRef<
 >(({ className, size, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
+    role="button"
     className={cn(tabsTriggerVariants({ size }), className)}
     {...props}
   />
