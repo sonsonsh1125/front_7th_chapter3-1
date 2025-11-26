@@ -5,7 +5,6 @@ import { userService } from "../services/userService";
 import { postService } from "../services/postService";
 import type { User } from "../services/userService";
 import type { Post } from "../services/postService";
-import "../styles/input.css";
 
 // TODO: 레거시 컴포넌트 마이그레이션 필요
 // 임시 타입 정의 (실제 구현은 shadcn/ui로 교체 예정)
