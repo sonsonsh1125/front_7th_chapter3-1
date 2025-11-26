@@ -1,7 +1,7 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const tableVariants = cva("w-full caption-bottom", {
   variants: {
@@ -14,7 +14,7 @@ const tableVariants = cva("w-full caption-bottom", {
   defaultVariants: {
     size: "default",
   },
-})
+});
 
 export interface TableProps
   extends React.HTMLAttributes<HTMLTableElement>,
@@ -30,16 +30,16 @@ const Table = React.forwardRef<HTMLTableElement, TableProps>(
       />
     </div>
   )
-)
-Table.displayName = "Table"
+);
+Table.displayName = "Table";
 
 const TableHeader = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
-))
-TableHeader.displayName = "TableHeader"
+));
+TableHeader.displayName = "TableHeader";
 
 const TableBody = React.forwardRef<
   HTMLTableSectionElement,
@@ -50,8 +50,8 @@ const TableBody = React.forwardRef<
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
   />
-))
-TableBody.displayName = "TableBody"
+));
+TableBody.displayName = "TableBody";
 
 const TableFooter = React.forwardRef<
   HTMLTableSectionElement,
@@ -65,8 +65,8 @@ const TableFooter = React.forwardRef<
     )}
     {...props}
   />
-))
-TableFooter.displayName = "TableFooter"
+));
+TableFooter.displayName = "TableFooter";
 
 const TableRow = React.forwardRef<
   HTMLTableRowElement,
@@ -80,8 +80,8 @@ const TableRow = React.forwardRef<
     )}
     {...props}
   />
-))
-TableRow.displayName = "TableRow"
+));
+TableRow.displayName = "TableRow";
 
 const tableHeadVariants = cva(
   "text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
@@ -97,7 +97,7 @@ const tableHeadVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface TableHeadProps
   extends React.ThHTMLAttributes<HTMLTableCellElement>,
@@ -111,8 +111,8 @@ const TableHead = React.forwardRef<HTMLTableCellElement, TableHeadProps>(
       {...props}
     />
   )
-)
-TableHead.displayName = "TableHead"
+);
+TableHead.displayName = "TableHead";
 
 const tableCellVariants = cva("align-middle [&:has([role=checkbox])]:pr-0", {
   variants: {
@@ -125,7 +125,7 @@ const tableCellVariants = cva("align-middle [&:has([role=checkbox])]:pr-0", {
   defaultVariants: {
     size: "default",
   },
-})
+});
 
 export interface TableCellProps
   extends React.TdHTMLAttributes<HTMLTableCellElement>,
@@ -139,8 +139,8 @@ const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
       {...props}
     />
   )
-)
-TableCell.displayName = "TableCell"
+);
+TableCell.displayName = "TableCell";
 
 const tableCaptionVariants = cva("mt-4 text-muted-foreground", {
   variants: {
@@ -153,7 +153,7 @@ const tableCaptionVariants = cva("mt-4 text-muted-foreground", {
   defaultVariants: {
     size: "default",
   },
-})
+});
 
 export interface TableCaptionProps
   extends React.HTMLAttributes<HTMLTableCaptionElement>,
@@ -168,8 +168,8 @@ const TableCaption = React.forwardRef<
     className={cn(tableCaptionVariants({ size }), className)}
     {...props}
   />
-))
-TableCaption.displayName = "TableCaption"
+));
+TableCaption.displayName = "TableCaption";
 
 export {
   Table,
@@ -184,4 +184,4 @@ export {
   tableHeadVariants,
   tableCellVariants,
   tableCaptionVariants,
-}
+};

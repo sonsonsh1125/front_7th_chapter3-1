@@ -104,6 +104,14 @@
     --input-small: 200px;
     --input-medium: 300px;
     --input-large: 400px;
+
+    --table-col-id: 60px;
+    --table-col-views: 100px;
+    --table-col-standard: 120px;
+    --table-col-medium: 140px;
+    --table-col-username: 150px;
+    --table-col-actions-user: 200px;
+    --table-col-actions-post: 250px;
   }
 
   .dark {

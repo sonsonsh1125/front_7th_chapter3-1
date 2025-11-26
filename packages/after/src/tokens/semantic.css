@@ -129,9 +129,17 @@
   --opacity-text: 0.87;
   --opacity-input-border: 0.23;
 
-  --width-input-small: 200px;
-  --width-input-medium: 300px;
-  --width-input-large: 400px;
+  --width-input-small: var(--input-small);
+  --width-input-medium: var(--input-medium);
+  --width-input-large: var(--input-large);
+
+  --width-table-col-id: var(--table-col-id);
+  --width-table-col-views: var(--table-col-views);
+  --width-table-col-standard: var(--table-col-standard);
+  --width-table-col-medium: var(--table-col-medium);
+  --width-table-col-username: var(--table-col-username);
+  --width-table-col-actions-user: var(--table-col-actions-user);
+  --width-table-col-actions-post: var(--table-col-actions-post);
 
   --height-badge-small: 16px;
   --height-badge-medium: 20px;
