@@ -24,3 +24,8 @@ Object.defineProperty(window, "localStorage", {
 
 // Mock window.confirm for delete operations
 global.confirm = vi.fn(() => true);
+
+// Fix React.act for React 19 compatibility
+// This is a workaround for @testing-library/react with React 19
+// See: https://github.com/testing-library/react-testing-library/issues/1209
+(globalThis as any).IS_REACT_ACT_ENVIRONMENT = true;
