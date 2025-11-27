@@ -54,7 +54,13 @@ export const Small: Story = {
   args: {
     children: 'Small',
     size: 'sm',
+    variant: 'default',
   },
+  render: (args) => (
+    <div style={{ padding: '20px', backgroundColor: 'white' }}>
+      <Badge {...args} />
+    </div>
+  ),
 };
 
 export const Large: Story = {
@@ -77,10 +83,10 @@ export const AllVariants: Story = {
 
 export const AllSizes: Story = {
   render: () => (
-    <div className="flex items-center gap-2">
-      <Badge size="sm">Small</Badge>
-      <Badge size="default">Default</Badge>
-      <Badge size="lg">Large</Badge>
+    <div className="flex items-center gap-2" style={{ padding: '20px', backgroundColor: 'white' }}>
+      <Badge size="sm" variant="default">Small</Badge>
+      <Badge size="default" variant="default">Default</Badge>
+      <Badge size="lg" variant="default">Large</Badge>
     </div>
   ),
 };

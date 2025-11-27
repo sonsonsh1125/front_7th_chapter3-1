@@ -141,9 +141,9 @@
   --width-table-col-actions-user: var(--table-col-actions-user);
   --width-table-col-actions-post: var(--table-col-actions-post);
 
-  --height-badge-small: 16px;
-  --height-badge-medium: 20px;
-  --height-badge-large: 24px;
+  --height-badge-small: 18px;
+  --height-badge-medium: 22px;
+  --height-badge-large: 26px;
   --height-checkbox: 16px;
   --height-modal-close: 32px;
 

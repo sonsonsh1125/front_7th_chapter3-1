@@ -53,6 +53,7 @@ const SelectTrigger = React.forwardRef<
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        aria-hidden="true"
       >
         <path d="m6 9 6 6 6-6" />
       </svg>
@@ -84,6 +85,7 @@ const SelectScrollUpButton = React.forwardRef<
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d="m18 15-6-6-6 6" />
     </svg>
@@ -114,6 +116,7 @@ const SelectScrollDownButton = React.forwardRef<
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d="m6 9 6 6 6-6" />
     </svg>
@@ -225,6 +228,7 @@ const SelectItem = React.forwardRef<
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          aria-hidden="true"
         >
           <path d="M20 6 9 17l-5-5" />
         </svg>
