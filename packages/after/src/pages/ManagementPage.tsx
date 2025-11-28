@@ -389,15 +389,19 @@ export const ManagementPage: React.FC = () => {
   const columns = renderTableColumns();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <div className="max-w-7xl mx-auto p-5">
         <div className="mb-5">
-          <h1 className="text-2xl font-bold mb-1 text-gray-900">관리 시스템</h1>
-          <p className="text-gray-600 text-sm">사용자와 게시글을 관리하세요</p>
+          <h1 className="text-2xl font-bold mb-1 text-foreground">
+            관리 시스템
+          </h1>
+          <p className="text-muted-foreground text-sm">
+            사용자와 게시글을 관리하세요
+          </p>
         </div>
 
         <Card className="p-2.5">
-          <div className="mb-4 border-b-2 border-gray-300 pb-1">
+          <div className="mb-4 border-b-2 border-border pb-1">
             <Tabs
               value={entityType}
               onValueChange={(value) => setEntityType(value as EntityType)}
@@ -456,7 +460,10 @@ export const ManagementPage: React.FC = () => {
                 className="p-3 bg-[var(--color-alert-info-bg)] border-[var(--color-alert-info-border)]"
               >
                 <CardHeader className="p-0 pb-1">
-                  <CardTitle size="sm" className="text-xs text-gray-600 mb-1">
+                  <CardTitle
+                    size="sm"
+                    className="text-xs text-muted-foreground mb-1"
+                  >
                     전체
                   </CardTitle>
                 </CardHeader>
@@ -472,7 +479,10 @@ export const ManagementPage: React.FC = () => {
                 className="p-3 bg-[var(--color-alert-success-bg)] border-[var(--color-alert-success-border)]"
               >
                 <CardHeader className="p-0 pb-1">
-                  <CardTitle size="sm" className="text-xs text-gray-600 mb-1">
+                  <CardTitle
+                    size="sm"
+                    className="text-xs text-muted-foreground mb-1"
+                  >
                     {stats.stat1.label}
                   </CardTitle>
                 </CardHeader>
@@ -488,7 +498,10 @@ export const ManagementPage: React.FC = () => {
                 className="p-3 bg-[var(--color-alert-warning-bg)] border-[var(--color-alert-warning-border)]"
               >
                 <CardHeader className="p-0 pb-1">
-                  <CardTitle size="sm" className="text-xs text-gray-600 mb-1">
+                  <CardTitle
+                    size="sm"
+                    className="text-xs text-muted-foreground mb-1"
+                  >
                     {stats.stat2.label}
                   </CardTitle>
                 </CardHeader>
@@ -504,7 +517,10 @@ export const ManagementPage: React.FC = () => {
                 className="p-3 bg-[var(--color-alert-error-bg)] border-[var(--color-alert-error-border)]"
               >
                 <CardHeader className="p-0 pb-1">
-                  <CardTitle size="sm" className="text-xs text-gray-600 mb-1">
+                  <CardTitle
+                    size="sm"
+                    className="text-xs text-muted-foreground mb-1"
+                  >
                     {stats.stat3.label}
                   </CardTitle>
                 </CardHeader>
@@ -520,7 +536,10 @@ export const ManagementPage: React.FC = () => {
                 className="p-3 bg-[var(--color-alert-default-bg)] border-[var(--color-alert-default-border)]"
               >
                 <CardHeader className="p-0 pb-1">
-                  <CardTitle size="sm" className="text-xs text-gray-600 mb-1">
+                  <CardTitle
+                    size="sm"
+                    className="text-xs text-muted-foreground mb-1"
+                  >
                     {stats.stat4.label}
                   </CardTitle>
                 </CardHeader>
@@ -532,7 +551,7 @@ export const ManagementPage: React.FC = () => {
               </Card>
             </div>
 
-            <div className="border border-gray-300 bg-white overflow-auto">
+            <div className="border border-border bg-card overflow-auto rounded-lg">
               <Table>
                 <TableHeader>
                   <TableRow>
