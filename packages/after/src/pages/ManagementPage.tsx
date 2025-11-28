@@ -628,7 +628,7 @@ export const ManagementPage: React.FC = () => {
                         setFormData({ ...formData, role: value })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="role" aria-label="역할 선택">
                         <SelectValue placeholder="역할 선택" />
                       </SelectTrigger>
                       <SelectContent>
@@ -659,7 +659,7 @@ export const ManagementPage: React.FC = () => {
                         setFormData({ ...formData, status: value })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="status" aria-label="상태 선택">
                         <SelectValue placeholder="상태 선택" />
                       </SelectTrigger>
                       <SelectContent>
@@ -706,7 +706,7 @@ export const ManagementPage: React.FC = () => {
                         setFormData({ ...formData, category: value })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="category" aria-label="카테고리 선택">
                         <SelectValue placeholder="카테고리 선택" />
                       </SelectTrigger>
                       <SelectContent>
@@ -808,7 +808,7 @@ export const ManagementPage: React.FC = () => {
                         setFormData({ ...formData, role: value })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="edit-role" aria-label="역할 선택">
                         <SelectValue placeholder="역할 선택" />
                       </SelectTrigger>
                       <SelectContent>
@@ -839,7 +839,7 @@ export const ManagementPage: React.FC = () => {
                         setFormData({ ...formData, status: value })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="edit-status" aria-label="상태 선택">
                         <SelectValue placeholder="상태 선택" />
                       </SelectTrigger>
                       <SelectContent>
@@ -886,7 +886,10 @@ export const ManagementPage: React.FC = () => {
                         setFormData({ ...formData, category: value })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger
+                        id="edit-category"
+                        aria-label="카테고리 선택"
+                      >
                         <SelectValue placeholder="카테고리 선택" />
                       </SelectTrigger>
                       <SelectContent>
